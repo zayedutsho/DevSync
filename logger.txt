@@ -40,3 +40,23 @@ Method=POST | Time=2026-05-22T18:40:11.211Z | URL=/api/auth/signup
 Method=POST | Time=2026-05-22T18:40:22.400Z | URL=/api/auth/login
 
 Method=POST | Time=2026-05-22T18:40:38.320Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T19:33:28.361Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T19:33:48.345Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T19:34:14.592Z | URL=/api/issues
+
+Method=GET | Time=2026-05-22T19:34:23.055Z | URL=/api/issues
+
+Method=GET | Time=2026-05-22T19:35:20.575Z | URL=/api/issues?type=bug
+
+Method=GET | Time=2026-05-22T19:35:53.641Z | URL=/api/issues?status=open
+
+Method=POST | Time=2026-05-22T19:37:30.559Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T19:38:03.072Z | URL=/api/issues
+
+Method=GET | Time=2026-05-22T19:41:19.706Z | URL=/api/issues?type=bug
+
+Method=GET | Time=2026-05-22T19:41:42.660Z | URL=/api/issues?sort=oldest
