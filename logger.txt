@@ -4,3 +4,11 @@ Method=GET | Time=2026-05-22T09:12:27.860Z | URL=/
 Method=GET | Time=2026-05-22T09:12:28.657Z | URL=/favicon.ico
 
 Method=POST | Time=2026-05-22T09:52:28.101Z | URL=/api/auth/signup
+
+Method=POST | Time=2026-05-22T10:03:49.275Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T10:07:49.512Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T10:08:05.425Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T10:11:11.403Z | URL=/api/auth/login

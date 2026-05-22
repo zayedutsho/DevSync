@@ -5,6 +5,7 @@ import express, {
   type Response,
 } from "express";
 import logger from "./middleware/logger.js";
+import { authRoute } from "./modules/auth/auth.router.js";
 import { userRoute } from "./modules/user/user.route.js";
 
 const app: Application = express();
@@ -33,7 +34,7 @@ app.get("/", (req: Request, res: Response) => {
 
 app.use("/api/auth/signup", userRoute);
 // app.use("/api/profile", profileRoute);
-// app.use("/api/auth", authRoute.router);
+app.use("/api/auth", authRoute.router);
 // app.use(globalErrorHandler);
 
 export default app;
