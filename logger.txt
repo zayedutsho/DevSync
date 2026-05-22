@@ -2,3 +2,5 @@
 Method=GET | Time=2026-05-22T09:12:27.860Z | URL=/
 
 Method=GET | Time=2026-05-22T09:12:28.657Z | URL=/favicon.ico
+
+Method=POST | Time=2026-05-22T09:52:28.101Z | URL=/api/auth/signup
