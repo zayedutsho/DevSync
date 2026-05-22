@@ -12,3 +12,11 @@ Method=POST | Time=2026-05-22T10:07:49.512Z | URL=/api/auth/login
 Method=POST | Time=2026-05-22T10:08:05.425Z | URL=/api/auth/login
 
 Method=POST | Time=2026-05-22T10:11:11.403Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T15:49:12.007Z | URL=/api/auth/signup
+
+Method=POST | Time=2026-05-22T15:50:03.635Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T15:51:37.931Z | URL=/api/auth/signup
+
+Method=POST | Time=2026-05-22T15:51:42.158Z | URL=/api/auth/signup

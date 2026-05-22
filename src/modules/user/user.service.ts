@@ -13,6 +13,7 @@ const createUserIntoDb = async (payload: IUser) => {
     `,
     [name, email, hashedPassword, role],
   );
+  delete result.rows[0].password;
 
   return result;
 };
