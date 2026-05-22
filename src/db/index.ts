@@ -9,9 +9,9 @@ export const initDb = async () => {
   try {
     await pool.query(`
             
-            CREATE TABLE IF NOT EXISTS users(
+  CREATE TABLE IF NOT EXISTS users(
             
-              id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY,
   name VARCHAR(100) NOT NULL,
   email VARCHAR(150) UNIQUE NOT NULL,
   password TEXT NOT NULL,
@@ -21,6 +21,17 @@ export const initDb = async () => {
             
             ) 
             `);
+
+    await pool.query(`CREATE TABLE issues (
+  id SERIAL PRIMARY KEY,
+  title VARCHAR(150) NOT NULL,
+  description TEXT NOT NULL,
+  type VARCHAR(20) CHECK (type IN ('bug', 'feature_request')) NOT NULL,
+  status VARCHAR(20) DEFAULT 'open' CHECK (status IN ('open', 'in_progress', 'resolved')),
+  reporter_id INTEGER NOT NULL,
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);`);
     console.log("database created successfully");
   } catch (error) {
     console.log(error);
