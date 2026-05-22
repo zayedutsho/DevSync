@@ -20,4 +20,6 @@ router.patch(
   issueController.updateIssue,
 );
 
+router.delete("/:id", verifyToken("maintainer"), issueController.deleteIssue);
+
 export const issueRoute = router;

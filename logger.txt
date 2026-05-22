@@ -106,3 +106,19 @@ Method=PATCH | Time=2026-05-22T20:03:16.396Z | URL=/api/issues/5
 Method=PATCH | Time=2026-05-22T20:04:13.453Z | URL=/api/issues/5
 
 Method=PATCH | Time=2026-05-22T20:04:42.081Z | URL=/api/issues/5
+
+Method=DELETE | Time=2026-05-22T20:06:56.992Z | URL=/api/issues/5
+
+Method=POST | Time=2026-05-22T20:07:04.526Z | URL=/api/auth/login
+
+Method=DELETE | Time=2026-05-22T20:07:26.466Z | URL=/api/issues/5
+
+Method=GET | Time=2026-05-22T20:07:58.372Z | URL=/api/issues
+
+Method=DELETE | Time=2026-05-22T20:08:46.042Z | URL=/api/issues/5
+
+Method=GET | Time=2026-05-22T20:13:53.960Z | URL=/users
+
+Method=GET | Time=2026-05-22T20:14:11.650Z | URL=/api/issues
+
+Method=GET | Time=2026-05-22T20:18:59.476Z | URL=/api/issues

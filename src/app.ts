@@ -4,6 +4,7 @@ import express, {
   type Request,
   type Response,
 } from "express";
+import globalErrorHandler from "./middleware/globalErrorHandler.js";
 import logger from "./middleware/logger.js";
 import { authRoute } from "./modules/auth/auth.router.js";
 import { issueRoute } from "./modules/issues/issues.route.js";
@@ -36,5 +37,12 @@ app.get("/", (req: Request, res: Response) => {
 app.use("/api/auth/signup", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/issues", issueRoute);
+app.use((req: Request, res: Response) => {
+  res.status(404).json({
+    success: false,
+    message: "API Not Found",
+  });
+});
+app.use(globalErrorHandler);
 
 export default app;
