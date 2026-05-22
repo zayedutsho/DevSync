@@ -22,7 +22,7 @@ export const initDb = async () => {
             ) 
             `);
 
-    await pool.query(`CREATE TABLE issues (
+    await pool.query(`CREATE TABLE IF NOT EXISTS issues (
   id SERIAL PRIMARY KEY,
   title VARCHAR(150) NOT NULL,
   description TEXT NOT NULL,

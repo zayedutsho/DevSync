@@ -26,3 +26,17 @@ Method=GET | Time=2026-05-22T16:22:34.192Z | URL=/
 Method=GET | Time=2026-05-22T16:22:35.126Z | URL=/favicon.ico
 
 Method=GET | Time=2026-05-22T16:22:35.832Z | URL=/
+
+Method=POST | Time=2026-05-22T18:37:50.600Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T18:38:40.984Z | URL=/api/auth/signup
+
+Method=POST | Time=2026-05-22T18:39:09.497Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T18:39:27.097Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T18:40:11.211Z | URL=/api/auth/signup
+
+Method=POST | Time=2026-05-22T18:40:22.400Z | URL=/api/auth/login
+
+Method=POST | Time=2026-05-22T18:40:38.320Z | URL=/api/issues
