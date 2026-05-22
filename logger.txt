@@ -60,3 +60,15 @@ Method=POST | Time=2026-05-22T19:38:03.072Z | URL=/api/issues
 Method=GET | Time=2026-05-22T19:41:19.706Z | URL=/api/issues?type=bug
 
 Method=GET | Time=2026-05-22T19:41:42.660Z | URL=/api/issues?sort=oldest
+
+Method=GET | Time=2026-05-22T19:46:22.863Z | URL=/api/issues
+
+Method=POST | Time=2026-05-22T19:46:38.605Z | URL=/api/issues/4
+
+Method=POST | Time=2026-05-22T19:46:50.594Z | URL=/api/issues/1
+
+Method=POST | Time=2026-05-22T19:47:08.829Z | URL=/api/issues/1
+
+Method=GET | Time=2026-05-22T19:47:42.441Z | URL=/api/issues/1
+
+Method=GET | Time=2026-05-22T19:47:52.855Z | URL=/api/issues/4
