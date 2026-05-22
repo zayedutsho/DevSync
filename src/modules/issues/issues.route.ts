@@ -14,4 +14,10 @@ router.get("/", issueController.getAllIssues);
 
 router.get("/:id", issueController.getSingleIssue);
 
+router.patch(
+  "/:id",
+  verifyToken("contributor", "maintainer"),
+  issueController.updateIssue,
+);
+
 export const issueRoute = router;

@@ -143,8 +143,73 @@ const getSingleIssueFromDb = async (id: string) => {
   };
 };
 
+//update issues
+const updateIssueIntoDb = async (
+  id: string,
+  payload: {
+    title?: string;
+    description?: string;
+    type?: string;
+    status?: string;
+  },
+  user: any,
+) => {
+  // get issue
+  const issueResult = await pool.query(
+    `
+    SELECT * FROM issues
+    WHERE id = $1
+    `,
+    [id],
+  );
+
+  const issue = issueResult.rows[0];
+
+  if (!issue) {
+    throw new Error("Issue not found");
+  }
+
+  // contributor rules
+  if (user.role === "contributor") {
+    // can only edit own issue
+    if (issue.reporter_id !== user.id) {
+      throw new Error("You can only update your own issues");
+    }
+
+    // cannot edit resolved/in_progress
+    if (issue.status !== "open") {
+      throw new Error("You can only update open issues");
+    }
+  }
+
+  // update issue
+  const result = await pool.query(
+    `
+    UPDATE issues
+    SET
+      title = $1,
+      description = $2,
+      type = $3,
+      status = $4,
+      updated_at = NOW()
+    WHERE id = $5
+    RETURNING *
+    `,
+    [
+      payload.title || issue.title,
+      payload.description || issue.description,
+      payload.type || issue.type,
+      payload.status || issue.status,
+      id,
+    ],
+  );
+
+  return result.rows[0];
+};
+
 export const issuesService = {
   createIssueIntoDb,
   getAllIssuesFromDb,
   getSingleIssueFromDb,
+  updateIssueIntoDb,
 };
